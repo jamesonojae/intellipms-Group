@@ -1,4 +1,4 @@
-<div class="row">
+<!--<div class="row filterDiv">
   <div class="col-lg-12">
     <div class="float-right mb-3">
       <div class="form-group">
@@ -17,40 +17,63 @@
       </div>
     </div>
   </div>
+</div>-->
+<div class="row filterDiv">
+  <div class="col-md-2 col-sm-4">
+    <div class="form-group">
+      <select class="form-control">
+        <option>Filter By Security Post</option>
+        <option>KSL One</option>
+        <option>KSL Two</option>
+        <option>KSL Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <div class="input-group">
+      <input id="dateOfBirth3" class="form-control" placeholder="yyyy-mm-dd" name="activeFromDate" ngbDatepicker #dp="ngbDatepicker">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="dp.toggle()" type="button"></button>
+      </div>
+    </div>
+  </div>
+  <!--<div class="col-md-2 col-sm-4">
+   <div class="form-group">
+     <label for="nameFilter"></label>
+     <input id="nameFilter" type="text" class="form-control"  name="nameFilter"
+            placeholder="Filter by user name">
+   </div>
+  </div>-->
 </div>
-
 <div class="row">
   <div class="col-lg-12">
     <div class="card">
       <div class="card-header">Monthly Attendance</div>
       <div class="card-body">
         <table class="table table-hover table-responsive-md">
-          <thead class="bg-transparent">
+          <thead class="bg-primary text-white">
           <tr class="pt-0">
             <td>s/n</td>
             <td>User Name</td>
-            <td>Days</td>
-            <td>User Post</td>
+            <td class="text-center" colspan="30">Days</td>
             <td>Total(hours)</td>
+          </tr>
+          <tr>
+            <th class="text-center" colspan="7"></th>
+            <th>1  2  3  4  5  6  7  8  9  10  11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</th>
           </tr>
           </thead>
           <tbody>
           <tr>
             <td>1</td>
             <td>Joe Bee</td>
-            <td>KSL One</td>
-            <td>Guard</td>
-            <td>01/12/2020 01:24:01</td>
-            <td>02/12/2020 09:14:31</td>
+            <td>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</td>
             <td>15</td>
           </tr>
           <tr>
             <td>2</td>
             <td>Musa KoKo</td>
-            <td>KSL Three</td>
-            <td>Supervisor</td>
-            <td>08/12/2020 12:24:01</td>
-            <td>11/12/2020 15:14:31</td>
+            <td>0 0 0 0 0 2 0 0 5 0 0 0 0 6 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</td>
             <td>13</td>
           </tr>
           </tbody>
@@ -66,3 +89,50 @@
   </div>
 </div>
 
+<!--
+<div class="row filterDiv">
+  <div class="col-md-2 col-sm-4">
+    <label for="monthFilter"></label>
+    <input autocomplete="off" class="form-control" id="monthFilter" name="date"
+           placeholder="Click here to filter by month">
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <label for="hotelFilter"></label>
+    <select id="hotelFilter" class="form-control"  name="hotelFilter" >
+&lt;!&ndash;      <option *ngFor="let hotel of employeeAccessHotels" [value]="hotel.hotelId">{{hotel.hotelName}}</option>&ndash;&gt;
+    </select>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <label for="nameFilter"></label>
+    <input type="text" id="nameFilter4" class="form-control"  name="nameFilter"
+           placeholder="Filter by employee name">
+  </div>
+</div>
+
+<div class="col-12 mt-3">
+  <div class="mb-4">
+    <h3>Attendance list for the month of </h3>
+  </div>
+  <div class="card">
+    <div style="overflow-x:auto;">
+      <table class="table table-responsive-sm table-responsive-md table-outline table-hover">
+        <thead>
+        <tr>
+          <th>Sn</th>
+          <th>Employees</th>
+          <th class="text-center" colspan="30">Days</th>
+          <th>Total(hours)</th>
+        </tr>
+        <tr>
+          <th colspan="2"></th>
+          <th>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+-->

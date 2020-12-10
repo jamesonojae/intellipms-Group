@@ -69,13 +69,13 @@
                         <span class="caret"></span></a>
                     <div class="dropdown-menu" ngbDropdownMenu>
                         <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
-                        <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
-                        <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
+                        <!--<a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
+                        <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>-->
                         <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i
                                 class="ti-settings"></i> Account
                             Setting
                         </a>
-                        <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i
+                        <div class="dropdown-divider"></div> <a  class="dropdown-item" (click)="logout()"><i
                                 class="fa fa-power-off"></i>
                             Logout</a>
                     </div>
@@ -87,9 +87,9 @@
                 <!-- item-->
                 <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
                 <!-- item-->
-                <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+                <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi"></i></a>
                 <!-- item-->
-                <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+                <a style="cursor: pointer" class="link" data-toggle="tooltip" title="Logout" (click)="logout()"><i class="mdi mdi-power"></i></a>
             </div>
         </div>
     </aside>

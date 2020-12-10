@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-security-panel',
-  templateUrl: './security-panel.component.html',
-  styleUrls: ['./security-panel.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class SecurityPanelComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   constructor(private  modalService: NgbModal) { }
 

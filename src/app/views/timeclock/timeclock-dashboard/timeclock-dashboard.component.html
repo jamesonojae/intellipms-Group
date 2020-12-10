@@ -1,0 +1,64 @@
+<div class="row pt-5">
+ <div class="col-lg-4">
+   <div class="card text-center">
+     <div class="card-body">
+       <h1 class="text-center text-primary">GROUP-INTELLIPMS TIME CLOCK</h1>
+       <form>
+         <div class="form-group">
+           <p>Welcome</p>
+           Helen Mama
+           <button type="button" class="form-control btn btn-rounded btn-primary btn-sm mb-3">Clock-In</button>
+           <button type="button" class="form-control btn btn-rounded btn-primary btn-sm">Clock-Out</button>
+         </div>
+       </form>
+     </div>
+     <div class="card text-white bg-primary py-5">
+       <div class="card-body text-center">
+         <div>
+           <h2>Time Spent</h2>
+           <p class="readings">10:49:06</p>
+           <button type="button" class="btn btn-primary active mt-3" (click)="dashboard()">Back</button>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-header">Last Ten Attendance History</div>
+        <div class="card-body">
+          <table class="table table-hover table-responsive-md">
+            <thead class="bg-primary text-white">
+            <tr class="pt-0">
+              <td>s/n</td>
+              <td>ClockIn DateTime</td>
+              <td>ClockOut DateTime</td>
+              <td>Hours Spent</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>01/12/2020 01:24:01</td>
+              <td>02/12/2020 09:14:31</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>08/12/2020 12:24:01</td>
+              <td>11/12/2020 15:14:31</td>
+              <td>13</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+        <div class="card-footer">
+
+        </div>
+      </div>
+    </div>
+
+ </div>

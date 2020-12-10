@@ -4,7 +4,7 @@
       <div class="card-header">List Of Activated Device</div>
       <div class="card-body">
         <table class="table table-hover table-responsive-md">
-          <thead class="bg-transparent">
+          <thead class="bg-primary text-white">
           <tr class="pt-0">
             <td>s/n</td>
             <td>User Name</td>
@@ -23,8 +23,8 @@
               <div ngbDropdown class="d-inline-block">
                 <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Action</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button ngbDropdownItem>Update</button>
-                  <button ngbDropdownItem>De-Activated</button>
+                  <button ngbDropdownItem  (click)="openLg(updateDeviceModal)">Update</button>
+                  <button ngbDropdownItem (click)="open(deActivateDeviceModal)">De-Activated</button>
                 </div>
               </div>
             </td>
@@ -38,8 +38,8 @@
               <div ngbDropdown class="d-inline-block">
                 <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Action</button>
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <button ngbDropdownItem>Update</button>
-                  <button ngbDropdownItem>De-Activated</button>
+                  <button ngbDropdownItem (click)="openLg(updateDeviceModal)">Update</button>
+                  <button ngbDropdownItem (click)="open(deActivateDeviceModal)">De-Activated</button>
                 </div>
               </div>
             </td>
@@ -56,3 +56,92 @@
     </div>
   </div>
 </div>
+
+<ng-template #updateDeviceModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Update Device</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title"></h4>
+        </div>
+        <div class="form-group">
+          <label for="firstName">Device Name</label>
+          <input id="firstName" type="text" class="form-control" placeholder="Device Name">
+        </div>
+
+        <div class="form-group">
+          <label for="securityPost">Select Security Post</label>
+          <select id="securityPost" class="form-control">
+            <option>Select Security Post</option>
+            <option>KSL One</option>
+            <option>KSL Two</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+          <label for="address">Description</label>
+          <textarea id="description" class="form-control" rows="4"></textarea>
+        </div>
+
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" class="form-control" rows="4"></textarea>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-rounded btn-dark" (click)="modal.close()">Close</button>
+    <button type="button" class="btn btn-rounded btn-primary" (click)="modal.close()">Save</button>
+  </div>
+</ng-template>
+<!--password modal-->
+<ng-template #changeUserPasswordModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Change User Password</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="password">Enter New Password</label>
+      <input id="password" type="text" class="form-control" placeholder="enter new password">
+      <label for="password2">Enter New Password</label>
+      <input id="password2" type="text" class="form-control" placeholder="re-enter new password">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-inverse" (click)="modal.dismiss()">Cancel</button>
+    <button type="button" class="btn btn-inverse" (click)="modal.dismiss()">Update</button>
+  </div>
+</ng-template>
+
+<!--delete modal-->
+<ng-template #deActivateDeviceModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">De-Activate Device</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <span>Are You sure you want to De-activate this Device</span>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-inverse" (click)="modal.dismiss()">Cancel</button>
+    <button type="button" class="btn btn-inverse" (click)="modal.dismiss()">Yes</button>
+  </div>
+</ng-template>

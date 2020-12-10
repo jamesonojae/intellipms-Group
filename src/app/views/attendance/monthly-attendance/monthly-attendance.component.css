@@ -1,0 +1,15 @@
+.showEntriesDiv {
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+
+.showEntriesDiv .entriesText {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.filterDiv {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}

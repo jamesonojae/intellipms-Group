@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-users-panel',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersPanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private  modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
 
+  openLg(content: any) {
+    this.modalService.open(content, {size: 'lg'}).result.then((result) => {
+    }, (reason) => {
+    });
+  }
+  open(content: any) {
+    this.modalService.open(content, {size: 'md'}).result.then((result) => {
+    }, (reason) => {
+    });
+  }
 }

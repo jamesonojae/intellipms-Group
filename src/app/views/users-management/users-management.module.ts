@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UsersManagementRoutingModule } from './users-management-routing.module';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UsersPanelComponent } from './users-panel/users-panel.component';
-import {NgbAccordionModule, NgbDropdownModule, NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbAccordionModule, NgbDatepickerModule, NgbDropdownModule, NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import {NgbAccordionModule, NgbDropdownModule, NgbPaginationModule} from '@ng-bo
     UsersManagementRoutingModule,
     NgbAccordionModule,
     NgbDropdownModule,
-    NgbPaginationModule
+    NgbPaginationModule,
+    NgbDatepickerModule
   ]
 })
 export class UsersManagementModule { }

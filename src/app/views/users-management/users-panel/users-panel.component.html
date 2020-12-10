@@ -1,11 +1,36 @@
+<div class="row filterDiv">
+  <div class="col-md-2 col-sm-4">
+    <div class="form-group">
+      <select class="form-control">
+        <option>Filter By Security Post</option>
+        <option>KSL One</option>
+        <option>KSL Two</option>
+        <option>KSL Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="search by user name">
+    </div>
+  </div>
+  <!--<div class="col-md-2 col-sm-4">
+   <div class="form-group">
+     <label for="nameFilter"></label>
+     <input id="nameFilter" type="text" class="form-control"  name="nameFilter"
+            placeholder="Filter by user name">
+   </div>
+  </div>-->
+</div>
+
 <div class="row">
   <div class="col-lg-12">
     <div class="card">
       <div class="card-header">List Of Users</div>
       <div class="card-body">
-          <table class="table table-hover table-responsive-md">
-            <thead class="bg-transparent">
-            <tr class="pt-0">
+          <table class="table table-hover table-responsive-md pt-0 py-0 px-0">
+            <thead class="bg-primary py-0 px-0">
+            <tr class="pt-0 text-white">
               <td>s/n</td>
               <td>User Name</td>
               <td>Users Post unit</td>
@@ -27,11 +52,11 @@
               <td>090876542</td>
               <td>
                 <div ngbDropdown class="d-inline-block">
-                  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Action</button>
+                  <button class="btn btn-outline-primary" id="dropdownBasic" ngbDropdownToggle>Action</button>
                   <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                    <button ngbDropdownItem>Edit</button>
-                    <button ngbDropdownItem>Change password</button>
-                    <button ngbDropdownItem>Delete</button>
+                    <button ngbDropdownItem (click)="openLg(updateUserModal)">Edit</button>
+                    <button ngbDropdownItem (click)="open(changeUserPasswordModal)">Change password</button>
+                    <button ngbDropdownItem (click)="open(changeClockPinModal)">Change Clock Pin</button>
                   </div>
                 </div>
               </td>
@@ -48,9 +73,9 @@
                 <div ngbDropdown class="d-inline-block">
                   <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Action</button>
                   <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                    <button ngbDropdownItem>Edit</button>
-                    <button ngbDropdownItem>Change password</button>
-                    <button ngbDropdownItem>Delete</button>
+                    <button ngbDropdownItem (click)="openLg(updateUserModal)">Edit</button>
+                    <button ngbDropdownItem (click)="open(changeUserPasswordModal)">Change password</button>
+                    <button ngbDropdownItem (click)="open(changeClockPinModal)">Change Clock Pin</button>
                   </div>
                 </div>
               </td>
@@ -67,3 +92,152 @@
     </div>
   </div>
 </div>
+
+<ng-template #updateUserModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Update User</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+
+
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" class="form-control" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="otherName">Other Name</label>
+                    <input id="otherName" type="text" class="form-control" placeholder="other Name">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" class="form-control" placeholder="last Name">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="phoneNumber">Mobile Number</label>
+                    <input id="phoneNumber" type="text" class="form-control" placeholder="Phone Number">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="text" class="form-control" placeholder="email address">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" class="form-control">
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="securityPost">Select Security Post</label>
+                    <select id="securityPost" class="form-control">
+                      <option>Select Security Post</option>
+                      <option>KSL One</option>
+                      <option>KSL Two</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="securityPosition">Select Position</label>
+                    <select id="securityPosition" class="form-control">
+                      <option>Select Position</option>
+                      <option>Supervisor</option>
+                      <option>Guard</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label for="clockFrequency">Select Check Frequency</label>
+                    <select id="clockFrequency" class="form-control">
+                      <option>Select Clock Frequency</option>
+                      <option>2 hours</option>
+                      <option>3 hours</option>
+                      <option>4 hours</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <button type="button" class="btn btn-rounded btn-block btn-primary">upload image</button>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" class="form-control" cols="7"></textarea>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-rounded btn-dark" (click)="modal.close()">Close</button>
+    <button type="button" class="btn btn-rounded btn-primary" (click)="modal.close()">Save</button>
+  </div>
+</ng-template>
+<!--password modal-->
+<ng-template #changeUserPasswordModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Change User Password</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="password">Enter New Password</label>
+      <input id="password" type="text" class="form-control" placeholder="enter new password">
+      <label for="password2">Enter New Password</label>
+      <input id="password2" type="text" class="form-control" placeholder="re-enter new password">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-inverse" (click)="modal.dismiss()">Cancel</button>
+    <button type="button" class="btn btn-inverse" (click)="modal.dismiss()">Update</button>
+  </div>
+</ng-template>
+
+<!--change pin modal-->
+<ng-template #changeClockPinModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Change Clock Pin</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <span></span>
+      <button type="button" class="form-control btn btn-rounded btn-primary">Click To Change Clock Pin</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-inverse" (click)="modal.dismiss()">Close</button>
+  </div>
+</ng-template>

@@ -6,7 +6,8 @@ import {SecurityDashboardComponent} from './security-dashboard/security-dashboar
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'security-panel'
+    redirectTo: 'security-panel',
+    pathMatch: 'full'
   },
   {
     path: 'security-panel',

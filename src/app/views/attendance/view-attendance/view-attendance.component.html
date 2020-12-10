@@ -1,22 +1,29 @@
-<div class="row">
-  <div class="col-lg-12">
-    <div class="float-right mb-3">
-      <div class="form-group">
-        <select class="form-control">
-          <option>Filter By Security Post</option>
-          <option>KSL One</option>
-          <option>KSL Two</option>
-          <option>KSL Three</option>
-        </select>
-      </div>
-      <div class="input-group">
-        <input id="dateOfBirth2" class="form-control" placeholder="yyyy-mm-dd" name="activeFromDate" ngbDatepicker #dp="ngbDatepicker">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="dp.toggle()" type="button"></button>
-        </div>
+<div class="row filterDiv">
+  <div class="col-md-2 col-sm-4">
+    <div class="form-group">
+      <select class="form-control">
+        <option>Filter By Security Post</option>
+        <option>KSL One</option>
+        <option>KSL Two</option>
+        <option>KSL Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-2 col-sm-4">
+    <div class="input-group">
+      <input id="dateOfBirth3" class="form-control" placeholder="yyyy-mm-dd" name="activeFromDate" ngbDatepicker #dp="ngbDatepicker">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="dp.toggle()" type="button"></button>
       </div>
     </div>
   </div>
+  <!--<div class="col-md-2 col-sm-4">
+   <div class="form-group">
+     <label for="nameFilter"></label>
+     <input id="nameFilter" type="text" class="form-control"  name="nameFilter"
+            placeholder="Filter by user name">
+   </div>
+  </div>-->
 </div>
 
 <div class="row">
@@ -25,7 +32,7 @@
       <div class="card-header">List Of Attendance</div>
       <div class="card-body">
         <table class="table table-hover table-responsive-md">
-          <thead class="bg-transparent">
+          <thead class="bg-primary text-white">
           <tr class="pt-0">
             <td>s/n</td>
             <td>User Name</td>

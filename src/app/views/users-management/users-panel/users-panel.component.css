@@ -1,0 +1,5 @@
+.filterDiv {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}

@@ -13,10 +13,10 @@ export class FullComponent implements OnInit {
 
 	public config: PerfectScrollbarConfigInterface = {};
 
-  constructor(public router: Router) {}
+  constructor(private router: Router) {}
 
-  public innerWidth: number=0;
-  public defaultSidebar='';
+  public innerWidth = 0;
+  public defaultSidebar = '';
   public showMobileMenu = false;
   public expandLogo = false;
   public sidebartype = 'full';
@@ -34,7 +34,7 @@ export class FullComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event:string) {
+  onResize(event: string) {
     this.handleSidebar();
   }
 
@@ -59,5 +59,9 @@ export class FullComponent implements OnInit {
 
       default:
     }
+  }
+
+  logout(): void {
+    this.router.navigate(['/login']);
   }
 }
