@@ -2,9 +2,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-	CommonModule,
-	LocationStrategy,
-	PathLocationStrategy
+  CommonModule,
+  LocationStrategy,
+  PathLocationStrategy
 } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -27,24 +27,24 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-import { GoodComponent } from './views/good/good.component';
+// import { LoginComponent } from './views/login/login.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-	suppressScrollX: true,
-	wheelSpeed: 1,
-	wheelPropagation: true,
-	minScrollbarLength: 20
-};   
+  suppressScrollX: true,
+  wheelSpeed: 1,
+  wheelPropagation: true,
+  minScrollbarLength: 20
+};
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		SpinnerComponent,
-		FullComponent,
-		NavigationComponent,
-		SidebarComponent,
-		BreadcrumbComponent,
-		GoodComponent
+  declarations: [
+    AppComponent,
+    SpinnerComponent,
+    FullComponent,
+    NavigationComponent,
+    SidebarComponent,
+    BreadcrumbComponent,
+    // LoginComponent,
 	],
 	imports: [
 		CommonModule,
@@ -61,7 +61,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 			provide: LocationStrategy,
 			useClass: PathLocationStrategy
 		},
-	{
+	  {
 			provide: PERFECT_SCROLLBAR_CONFIG,
 			useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
 		}

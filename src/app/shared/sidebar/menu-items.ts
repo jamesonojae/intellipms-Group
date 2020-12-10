@@ -11,122 +11,90 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '',
-    title: 'UI Components',
+    title: 'User Management',
     icon: 'mdi mdi-dots-horizontal',
     class: 'nav-small-cap',
     extralink: true,
     submenu: []
   },
   {
-    path: '/component/accordion',
-    title: 'Accordion',
-    icon: 'mdi mdi-equal',
+    path: '/users-management/create-user',
+    title: 'Create User',
+    icon: 'mdi mdi-account-multiple-plus',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/alert',
-    title: 'Alert',
-    icon: 'mdi mdi-message-bulleted',
+    path: '/users-management/users-panel',
+    title: 'Users Panel',
+    icon: 'mdi mdi-account-settings-variant',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/carousel',
-    title: 'Carousel',
-    icon: 'mdi mdi-view-carousel',
+    path: '',
+    title: 'Attendance',
+    icon: 'mdi mdi-dots-horizontal',
+    class: 'nav-small-cap',
+    extralink: true,
+    submenu: []
+  },
+  {
+    path: '/attendance/view-attendance',
+    title: 'View Attendance',
+    icon: 'mdi mdi-checkbox-multiple-marked',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/dropdown',
-    title: 'Dropdown',
-    icon: 'mdi mdi-arrange-bring-to-front',
+    path: '/attendance/monthly-attendance',
+    title: 'Monthly Attendance',
+    icon: 'mdi mdi-checkbox-multiple-marked-circle-outline',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/modal',
-    title: 'Modal',
-    icon: 'mdi mdi-tablet',
+    path: '',
+    title: 'Admin',
+    icon: 'mdi mdi-dots-horizontal',
+    class: 'nav-small-cap',
+    extralink: true,
+    submenu: []
+  },
+  {
+    path: '/security-post/security-panel',
+    title: 'Security Panel',
+    icon: 'mdi mdi-nature-people',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/pagination',
-    title: 'Pagination',
-    icon: 'mdi mdi-backburger',
+    path: '',
+    title: 'Device',
+    icon: 'mdi mdi-dots-horizontal',
+    class: 'nav-small-cap',
+    extralink: true,
+    submenu: []
+  },
+  {
+    path: '/devices/activate-device',
+    title: 'Activate Device',
+    icon: 'mdi mdi-tablet-ipad',
     class: '',
     extralink: false,
     submenu: []
   },
   {
-    path: '/component/poptool',
-    title: 'Popover & Tooltip',
-    icon: 'mdi mdi-image-filter-vintage',
+    path: '/devices/list-activated-devices',
+    title: 'List Of Activated Devices',
+    icon: 'mdi mdi-vibrate',
     class: '',
     extralink: false,
     submenu: []
   },
-  {
-    path: '/component/progressbar',
-    title: 'Progressbar',
-    icon: 'mdi mdi-poll',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/rating',
-    title: 'Ratings',
-    icon: 'mdi mdi-bandcamp',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/tabs',
-    title: 'Tabs',
-    icon: 'mdi mdi-sort-variant',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/timepicker',
-    title: 'Timepicker',
-    icon: 'mdi mdi-calendar-clock',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/buttons',
-    title: 'Button',
-    icon: 'mdi mdi-blur-radial',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/card',
-    title: 'Card',
-    icon: 'mdi mdi-arrange-bring-forward',
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/toast',
-    title: 'Toast',
-    icon: 'mdi mdi-alert',
-    class: '',
-    extralink: false,
-    submenu: []
-  }
 ];

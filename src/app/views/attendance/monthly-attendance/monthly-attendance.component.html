@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="float-right mb-3">
+      <div class="form-group">
+        <select class="form-control">
+          <option>Filter By Security Post</option>
+          <option>KSL One</option>
+          <option>KSL Two</option>
+          <option>KSL Three</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <input id="dateOfBirth2" class="form-control" placeholder="yyyy-mm-dd" name="activeFromDate" ngbDatepicker #dp="ngbDatepicker">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="dp.toggle()" type="button"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">Monthly Attendance</div>
+      <div class="card-body">
+        <table class="table table-hover table-responsive-md">
+          <thead class="bg-transparent">
+          <tr class="pt-0">
+            <td>s/n</td>
+            <td>User Name</td>
+            <td>Days</td>
+            <td>User Post</td>
+            <td>Total(hours)</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Joe Bee</td>
+            <td>KSL One</td>
+            <td>Guard</td>
+            <td>01/12/2020 01:24:01</td>
+            <td>02/12/2020 09:14:31</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Musa KoKo</td>
+            <td>KSL Three</td>
+            <td>Supervisor</td>
+            <td>08/12/2020 12:24:01</td>
+            <td>11/12/2020 15:14:31</td>
+            <td>13</td>
+          </tr>
+          </tbody>
+          <tfoot>
+          </tfoot>
+        </table>
+      </div>
+      <div class="card-footer">
+
+        <ngb-pagination class="d-flex justify-content-start" [collectionSize]="70" ></ngb-pagination>
+      </div>
+    </div>
+  </div>
+</div>
+
