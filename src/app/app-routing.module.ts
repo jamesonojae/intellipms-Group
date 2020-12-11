@@ -8,6 +8,10 @@ import {TimeclockLoginComponent} from './views/timeclock/timeclock-login/timeclo
 export const Approutes: Routes = [
   {
     path: '',
+    component: LoginComponent
+  },
+  {
+    path: '',
     component: FullComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -48,10 +52,6 @@ export const Approutes: Routes = [
   {
     path: 'timeclock',
     loadChildren: () => import('./views/timeclock/timeclock.module').then(m => m.TimeclockModule)
-  },
-  {
-    path: 'login',
-    component: LoginComponent
   },
   {
     path: '**',
